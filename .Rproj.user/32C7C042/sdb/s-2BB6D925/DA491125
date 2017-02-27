@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\\usepackage{booktabs}\n\\usepackage{amsthm}\n\\makeatletter\n\\def\\thm@space@setup{%\n  \\thm@preskip=8pt plus 2pt minus 4pt\n  \\thm@postskip=\\thm@preskip\n}\n\\makeatother\n",
+    "created" : 1486692748583.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1350412223",
+    "id" : "DA491125",
+    "lastKnownWriteTime" : 1484752901,
+    "last_content_update" : 1484752901,
+    "path" : "~/Documents/bookdown/pmeasyr-book/preamble.tex",
+    "project_path" : "preamble.tex",
+    "properties" : {
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "tex"
+}

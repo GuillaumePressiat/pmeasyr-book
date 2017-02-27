@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Methods\n\nWe describe our methods in this chapter.\n",
+    "created" : 1486692727377.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2947440194",
+    "id" : "4046B169",
+    "lastKnownWriteTime" : 1484752901,
+    "last_content_update" : 1484752901,
+    "path" : "~/Documents/bookdown/pmeasyr-book/03-method.Rmd",
+    "project_path" : "03-method.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

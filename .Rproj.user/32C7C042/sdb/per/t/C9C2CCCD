@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Fichier TRA\n\n\nLe fichier TRA est un fichier du *out* qui permet de relier les donnees anonymes du *out* aux donnees du *in*, il comprend un lien entre : \n\n  - MCO : cle_rsa, numero de rss, numero de sejour (nas), date d'entree et date de sortie du sejour\n  - SSR : numero sequentiel du sejour + noseqrhs et numero de sejour + numero de semaine\n  - PSY RPSA : ipp, date d'entree et de fin du sejour, numero sequentiel du sejour, numero de sequence et numero de sejour, dates de debut et fin de sequence\n  - PSY R3A : ipp, date de l'acte, numero d'ordre, forme activité, um, nature et lieu de l'acte\n  - HAD : numero sequentiel de sejour, numero de sequence, sous-sequence et numero de sejour, dates de debut et fin des sequences et sous-sequences, dates d'entree et de sortie du sejour, modes d'entree sortie provenance destination\n\n\n| Type     |Import                              |\n|---------:|:-----------------------------------|\n|[itra](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/itra.Rmd)      |~ TRA - Import du TRA               |\n|[inner_tra](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/inner_tra.Rmd) |~ TRA - Ajout du TRA aux donnees Out|\n\n## Ajout du TRA en MCO\n\n```{r eval = F}\n# lecture du fichier tra et jointure aux rsa\nitra(750100042, 2015, 12, '~/Documents/data/mco') -> tra\n# Ajout du tra aux rsa :\ninner_tra(rsa15$rsa, tra) -> rsa15$rsa\n```\n\n\n## Ajout du TRA en HAD\n\n```{r eval = F}\n# Import du TRA HAD\nitra(finess = 750712184,\n     annee = 2015,\n     mois = 12,\n     path = '~/Documents/data/had', \n     champ = \"had\") -> tra\n\n# Ajout du tra\ninner_tra(data_had$rapss, tra, champ = \"had\") -> data_had$rapss\ninner_tra(data_had$acdi,  tra, champ = \"had\") -> data_had$acdi\ninner_tra(data_had$ght,   tra, champ = \"had\") -> data_had$ght\n```\n\n## Ajout du TRA en SSR\n\n```{r eval = F}\n# Import du TRA SSR\nitra(finess = 750712184,\n     annee = 2015,\n     mois = 12,\n     path = '~/Documents/data/ssr', \n     champ = \"ssr\") -> tra\n\n# Ajout du tra\ninner_tra(data_ssr$rha,  tra, champ = \"ssr\") -> data_ssr$rha\ninner_tra(data_ssr$acdi, tra, champ = \"ssr\") -> data_ssr$acdi\n```\n\n## Ajout du TRA en PSY\n\n```{r eval = F}\n# Import du TRA PSY : fichiers RPSA\nitra(finess = 750803454,\n     annee = 2015,\n     mois = 12,\n     path = '~/Documents/data/psy', \n     champ = \"tra_psy_rpsa\") -> tra\n\n# Ajout du tra\ninner_tra(rpsa_psy$rpsa, tra, champ = \"psyrpsa\") -> rpsa_psy$rpsa\ninner_tra(rpsa_psy$das,  tra, champ = \"psyrpsa\") -> rpsa_psy$das\n```\n\n\n```{r eval = F}\n# Import du TRA PSY : fichiers R3A\nitra(finess = 750803454,\n     annee = 2015,\n     mois = 12,\n     path = '~/Documents/data/psy', \n     champ = \"tra_psy_r3a\") -> tra\n\n# Ajout du tra\ninner_tra(r3a_psy$r3a, tra, champ = \"psyr3a\") -> r3a_psy$r3a\ninner_tra(r3a_psy$das, tra, champ = \"psyr3a\") -> r3a_psy$das\n```\n\n",
+    "created" : 1486713666663.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3303783127",
+    "id" : "C9C2CCCD",
+    "lastKnownWriteTime" : 1486715301,
+    "last_content_update" : 1486715301257,
+    "path" : "~/Documents/bookdown/pmeasyr-book/07-fichier_tra.Rmd",
+    "project_path" : "07-fichier_tra.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

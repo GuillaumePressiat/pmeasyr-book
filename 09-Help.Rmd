@@ -1,0 +1,8 @@
+# Help
+
+Toutes les fonctions du package ont une page d'aide : 
+
+```{r eval = F}
+# Exemple : aide sur la fonction d'import des rsa
+?irsa
+```

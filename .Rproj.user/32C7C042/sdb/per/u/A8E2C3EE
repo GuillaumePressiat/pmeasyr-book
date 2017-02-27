@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "bookdown::render_book(\"index.Rmd\", \"bookdown::gitbook\")\nbookdown::render_book(\"index.Rmd\", \"bookdown::pdf_book\")\n",
+    "created" : 1486703586916.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3821659680",
+    "id" : "A8E2C3EE",
+    "lastKnownWriteTime" : 80,
+    "last_content_update" : 1486703674800,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

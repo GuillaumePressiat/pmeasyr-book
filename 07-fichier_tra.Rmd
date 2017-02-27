@@ -1,0 +1,94 @@
+# Fichier TRA
+
+
+Le fichier TRA est un fichier du *out* qui permet de relier les données anonymes du *out* aux données du *in*, il comprend un lien entre : 
+
+  - MCO : clé rsa, numéro de rss, numéro de sejour (nas), date d'entrée et date de sortie du séjour
+  - SSR : numéro séquentiel du séjour + noseqrhs et numéro de séjour + numéro de semaine
+  - PSY RPSA : ipp, date d'entrée et de fin du sejour, numéro séquentiel du séjour, numéro de séquence et numéro de séjour, dates de début et fin de sequence
+  - PSY R3A : ipp, date de l'acte, numéro d'ordre, forme activité, um, nature et lieu de l'acte
+  - HAD : numéro séquentiel de séjour, numéro de séquence, sous-sequence et numéro de séjour, dates de début et fin des séquences et sous-séquences, dates d'entrée et de sortie du séjour, modes d'entrée sortie provenance destination
+
+
+| Type     |Import                              |
+|---------:|:-----------------------------------|
+|[itra](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/itra.Rmd)      |~ TRA - Import du TRA               |
+|[inner_tra](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/inner_tra.Rmd) |~ TRA - Ajout du TRA aux données Out|
+
+## Ajout du TRA en MCO
+
+```{r eval = F}
+# lecture du fichier tra et jointure aux rsa
+itra(750100042, 2015, 12, '~/Documents/data/mco') -> tra
+
+# Ajout du tra aux rsa :
+inner_tra(rsa15$rsa, tra) -> rsa15$rsa
+# Ajout du tra à la partie um des rsa :
+inner_tra(rsa15$rsa_um, tra) -> rsa15$rsa_um
+# Ajout du tra à la partie actes des rsa :
+inner_tra(rsa15$actes, tra) -> rsa15$actes
+# Ajout du tra à la partie das des rsa :
+inner_tra(rsa15$das, tra) -> rsa15$das
+```
+
+
+## Ajout du TRA en HAD
+
+```{r eval = F}
+# Import du TRA HAD
+itra(finess = 750712184,
+     annee = 2015,
+     mois = 12,
+     path = '~/Documents/data/had', 
+     champ = "had") -> tra
+
+# Ajout du tra
+inner_tra(data_had$rapss, tra, champ = "had") -> data_had$rapss
+inner_tra(data_had$acdi,  tra, champ = "had") -> data_had$acdi
+inner_tra(data_had$ght,   tra, champ = "had") -> data_had$ght
+```
+
+## Ajout du TRA en SSR
+
+```{r eval = F}
+# Import du TRA SSR
+itra(finess = 750712184,
+     annee = 2015,
+     mois = 12,
+     path = '~/Documents/data/ssr', 
+     champ = "ssr") -> tra
+
+# Ajout du tra
+inner_tra(data_ssr$rha,  tra, champ = "ssr") -> data_ssr$rha
+inner_tra(data_ssr$acdi, tra, champ = "ssr") -> data_ssr$acdi
+```
+
+## Ajout du TRA en PSY
+
+```{r eval = F}
+# Import du TRA PSY : fichiers RPSA
+itra(finess = 750803454,
+     annee = 2015,
+     mois = 12,
+     path = '~/Documents/data/psy', 
+     champ = "tra_psy_rpsa") -> tra
+
+# Ajout du tra
+inner_tra(rpsa_psy$rpsa, tra, champ = "psyrpsa") -> rpsa_psy$rpsa
+inner_tra(rpsa_psy$das,  tra, champ = "psyrpsa") -> rpsa_psy$das
+```
+
+
+```{r eval = F}
+# Import du TRA PSY : fichiers R3A
+itra(finess = 750803454,
+     annee = 2015,
+     mois = 12,
+     path = '~/Documents/data/psy', 
+     champ = "tra_psy_r3a") -> tra
+
+# Ajout du tra
+inner_tra(r3a_psy$r3a, tra, champ = "psyr3a") -> r3a_psy$r3a
+inner_tra(r3a_psy$das, tra, champ = "psyr3a") -> r3a_psy$das
+```
+

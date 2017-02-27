@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Statistiques du PMSI\n\n## Âge et durée de séjour\n\n```{r eval = F}\nlibrary(dplyr)\n\n# Age moyen et DMS sur les plus de 0 jour\nrsa15$rsa %>% \n  summarise(age_moyen = mean(AGEAN, na.rm = T),\n            dms = mean(DUREE[DUREE > 0]),\n            effectif = n(),\n            effectif_sup0 = sum(DUREE > 0))\n\n# Age moyen en prenant en compte les séjours des bébés \n# (variable age en jour) \nrsa15$rsa %>% \n  mutate(Age = if_else(is.na(AGEAN), as.integer(AGEJR) / 365.25, as.numeric(AGEAN))) %>%\n  summarise(age_moyen = mean(Age),\n            effectif = n())\n\n```\n\n## Nombre de séjours par catégorie majeure de diagnostics\n\n```{r eval = F}\n# Nombre de séjours par catégorie majeure de diagnostics\nrsa15$rsa %>% count(RSACMD)\n```\n\n## Case-mix MCO, DMS par GHM / GHS\n\n```{r eval = F}\n# Construire la variable GHM\nrsa15$rsa %>% tidyr::unite(GHM, \n                           RSACMD, RSATYPE, RSANUM, RSACOMPX,\n                           sep = \"\") -> rsa15$rsa\n\n# Case-mix par GHM\nrsa15$rsa %>% count(GHM)\n\n# Case-mix par GHM / GHS\nrsa15$rsa %>% count(GHM, NOGHS)\n\n# DMS par GHM / GHS\nrsa15$rsa %>% group_by(GHM, NOGHS) %>%\n  summarise(dms = dms = mean(DUREE[DUREE > 0]),\n            effectif = n(),\n            effectif_sup0 = sum(DUREE > 0))\n```\n\n",
+    "created" : 1488113796172.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4252301431",
+    "id" : "49F0F8B",
+    "lastKnownWriteTime" : 1488113847,
+    "last_content_update" : 1488113847350,
+    "path" : "~/Desktop/pmeasyr-book/08-statistiques_bases.Rmd",
+    "project_path" : "08-statistiques_bases.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

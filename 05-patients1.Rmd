@@ -1,0 +1,52 @@
+# Étude des files actives
+
+## Import des données Anohosp
+
+```{r eval = F}
+# Import des données anohosp du out
+iano_mco(finess = 750100042, 
+         annee = 2015,
+         mois = 12,
+         path = '~/Documents/data/mco') -> ano
+
+# Filtrer sur les patients chainables avec la variable cok
+library(dplyr)
+ano %>% filter(cok) -> ano
+
+# File active globale établissement
+distinct(ano, NOANON) %>% nrow()
+```
+
+## File active d'une pathologie
+
+```{r eval = F}
+# Codes diagnostics obésité 
+string_diags = 'E66'
+
+library(dplyr)
+# position en dpdr
+rsa15$rsa %>% filter(grepl(string_diags, dpdrum)) -> ob
+
+# File active obésité globale établissement
+inner_join(ano, ob, by = c('CLE_RSA')) -> patients_ob
+distinct(patients_ob, NOANON) %>% nrow()
+```
+
+
+## File active d'une chirurgie
+
+```{r eval = F}
+# Codes actes chirurgie bariatrique
+liste_actes = c('HFCA001', 'HFCC003', 'HFFC004', 'HFFA001', 'HFMA009',
+                'HFMC007', 'HFKA001', 'HFKC001', 'HFKA002', 'HFMA011',
+                'HFMC008', 'HFMA010', 'HFMC006', 'HFLE002', 'HFGC900',
+                'HFLC900', 'HFFA011', 'HFFC018', 'HGCA009', 'HGCC027')
+
+library(dplyr)
+# acte codé activité 1 (chirurgical)
+rsa15$actes %>% filter(CDCCAM %in% liste_actes, ACT == '1') -> cob
+
+# File active chirurgie bariatrique globale établissement
+inner_join(ano, cob, by = c('CLE_RSA')) -> patients_cob
+distinct(patients_cob, NOANON) %>% nrow()
+```

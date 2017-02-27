@@ -1,0 +1,71 @@
+# Requêtes sur des pathologies / actes 
+
+## Transposition des codes diagnostics
+
+Les analyses sur les diagnostics CIM-10 sont parfois fastidieuses du fait des multiples positions de diagnostics : DP principal du séjour, DR principal du séjour, DPUM, DRUM, DAS. La fonction *tdiag* permet de rassembler tous les diagnostics dans une seule table.
+
+```{r eval = F}
+# Pour les objets rsa et rum du MCO
+# Transbahuter tous les diagnostics dans une seule table
+tdiag(rsa15) -> rsa15 # "Tidy diagnostics"
+View(rsa15$diags)
+# Tous les diagnostics sont dans une table, avec un numero selon leur position  
+# 1:DP, 2:DR, 3:DPUM, 4:DRUM, 5:DAS
+```
+
+Exemple de résultat : 
+
+|CLE_RSA   |NSEQRUM|position| diag |
+|:---------|:------|--------|------|
+|0000000001|     01|       1|  Z511|
+|0000000001|     01|       2|   C18|
+|0000000002|     01|       1|  C501|
+|0000000002|     01|       3|  C501|
+|0000000002|     02|       1|  D051|
+|0000000002|     02|       5|  E109|
+
+## Recherche de codes diagnostics
+
+L'objectif est de récupérer les séjours présentant un code diagnostic de la liste
+
+```{r eval = F}
+# Liste D-0103 de la fonction groupage 2016 : Epilepsies
+liste_diag = c('F803', 'G400', 'G401', 'G402', 'G403', 'G404', 
+               'G405', 'G406', 'G407', 'G408', 'G409', 'G410', 
+               'G411', 'G412', 'G418', 'G419', 'R568')
+
+# En passant par la table diags
+tdiag(rsa15) -> rsa15
+
+library(dplyr)
+# quelle que soit la position du diagnostic
+rsa15$diags %>% filter(diag %in% liste_diag)
+# position en das
+rsa15$diags %>% filter(diag %in% liste_diag, position == 5)
+# position en dp dr
+rsa15$diags %>% filter(diag %in% liste_diag, position < 5)
+
+# En passant par les zones stream
+string_diags = 
+  'F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|418|G419|R568'
+
+# quelle que soit la position du diagnostic
+rsa15$rsa %>% fiter(grepl(string_diags, dpdrum)|grepl(string_diags, das))
+# position en das
+rsa15$rsa %>% fiter(grepl(string_diags, das))
+# position en dpdr
+rsa15$rsa %>% fiter(grepl(string_diags, dpdrum))
+```
+
+## Recherche de codes actes
+
+```{r eval = F}
+# Code EBLA003
+
+library(dplyr)
+# En passant par la table actes
+rsa15$actes %>% filter(CDCCAM == 'EBLA003')
+# En passant par la zone stream
+rsa15$rsa %>% filter(grepl('EBLA003', actes))
+```
+

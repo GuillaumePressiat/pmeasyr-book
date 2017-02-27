@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "book_filename: \"bookdown-demo\"\nlanguage:\n  ui:\n    chapter_name: \"\"\n",
+    "created" : 1486692735489.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "908283195",
+    "id" : "F9673F7",
+    "lastKnownWriteTime" : 1486690530,
+    "last_content_update" : 1486690530,
+    "path" : "~/Documents/bookdown/pmeasyr-book/_bookdown.yml",
+    "project_path" : "_bookdown.yml",
+    "properties" : {
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}

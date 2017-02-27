@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Statistiques du PMSI\n\n  - âge moyen des patients\n  - Durée de séjour\n  - Nombre de séjours par catégorie majeure de diagnostics\n  - Case-mix MCO, DMS par GHM / GHS\n\n```{r eval = F}\n# Age moyen et DMS sur les plus de 0 jour\nrsa15$rsa %>% summarise(age_moyen = mean(AGEAN),\n                        dms = mean(if_else(DUREE>0, DUREE, NA), na.rm = T))\n```\n\n```{r eval = F}\n# Nombre de séjours par catégorie majeure de diagnostics\nrsa15$rsa %>% count(RSACMD)\n\n# Construire la variable GHM\nrsa15$rsa %>% tidyr::unite(GHM, \n                           RSACMD, RSATYPE, RSANUM, RSACOMPX,\n                           sep = \"\") -> rsa15$rsa\n\n# Case-mix par GHM\nrsa15$rsa %>% count(GHM)\n\n# Case-mix par GHM / GHS\nrsa15$rsa %>% count(GHM, NOGHS)\n\n# DMS par GHM / GHS\nrsa15$rsa %>% group_by(GHM, NOGHS) %>%\n  summarise(dms = mean(if_else(DUREE>0, DUREE, NA), na.rm = T))\n```\n",
+    "created" : 1486715612412.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2631473817",
+    "id" : "FA17E311",
+    "lastKnownWriteTime" : 1486716110,
+    "last_content_update" : 1486716110259,
+    "path" : "~/Documents/bookdown/pmeasyr-book/07-statistiques_bases.Rmd",
+    "project_path" : "07-statistiques_bases.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 17,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,51 @@
+# Statistiques du PMSI
+
+## Âge et durée de séjour
+
+```{r eval = F}
+library(dplyr)
+
+# Age moyen et DMS sur les plus de 0 jour
+rsa15$rsa %>% 
+  summarise(age_moyen = mean(AGEAN, na.rm = T),
+            dms = mean(DUREE[DUREE > 0]),
+            effectif = n(),
+            effectif_sup0 = sum(DUREE > 0))
+
+# Age moyen en prenant en compte les séjours des bébés 
+# (variable age en jour) 
+rsa15$rsa %>% 
+  mutate(Age = if_else(is.na(AGEAN), as.integer(AGEJR) / 365.25, as.numeric(AGEAN))) %>%
+  summarise(age_moyen = mean(Age),
+            effectif = n())
+
+```
+
+## Nombre de séjours par catégorie majeure de diagnostics
+
+```{r eval = F}
+# Nombre de séjours par catégorie majeure de diagnostics
+rsa15$rsa %>% count(RSACMD)
+```
+
+## Case-mix MCO, DMS par GHM / GHS
+
+```{r eval = F}
+# Construire la variable GHM
+rsa15$rsa %>% tidyr::unite(GHM, 
+                           RSACMD, RSATYPE, RSANUM, RSACOMPX,
+                           sep = "") -> rsa15$rsa
+
+# Case-mix par GHM
+rsa15$rsa %>% count(GHM)
+
+# Case-mix par GHM / GHS
+rsa15$rsa %>% count(GHM, NOGHS)
+
+# DMS par GHM / GHS
+rsa15$rsa %>% group_by(GHM, NOGHS) %>%
+  summarise(dms = dms = mean(DUREE[DUREE > 0]),
+            effectif = n(),
+            effectif_sup0 = sum(DUREE > 0))
+```
+

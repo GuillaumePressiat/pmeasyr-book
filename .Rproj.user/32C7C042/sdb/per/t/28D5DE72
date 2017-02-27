@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Chaînage PMSI\n\nNous allons ici chaîner les données MCO aux données HAD.\n\n",
+    "created" : 1486712287795.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2382865102",
+    "id" : "28D5DE72",
+    "lastKnownWriteTime" : 1486713354,
+    "last_content_update" : 1486713354906,
+    "path" : "~/Documents/bookdown/pmeasyr-book/06-patients2.Rmd",
+    "project_path" : "06-patients2.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

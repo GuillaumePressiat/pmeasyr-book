@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "@Book{xie2015,\n  title = {Dynamic Documents with {R} and knitr},\n  author = {Yihui Xie},\n  publisher = {Chapman and Hall/CRC},\n  address = {Boca Raton, Florida},\n  year = {2015},\n  edition = {2nd},\n  note = {ISBN 978-1498716963},\n  url = {http://yihui.name/knitr/},\n}\n",
+    "created" : 1486692854697.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2279226162",
+    "id" : "24032954",
+    "lastKnownWriteTime" : 1484752901,
+    "last_content_update" : 1484752901,
+    "path" : "~/Documents/bookdown/pmeasyr-book/book.bib",
+    "project_path" : "book.bib",
+    "properties" : {
+    },
+    "relative_order" : 16,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

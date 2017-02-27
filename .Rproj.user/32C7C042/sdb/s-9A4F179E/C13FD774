@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#TOC ul,\n#TOC li,\n#TOC span,\n#TOC a {\n  margin: 0;\n  padding: 0;\n  position: relative;\n}\n#TOC {\n  line-height: 1;\n  border-radius: 5px 5px 0 0;\n  background: #141414;\n  background: linear-gradient(to bottom, #333333 0%, #141414 100%);\n  border-bottom: 2px solid #0fa1e0;\n  width: auto;\n}\n#TOC:after,\n#TOC ul:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n#TOC a {\n  background: #141414;\n  background: linear-gradient(to bottom, #333333 0%, #141414 100%);\n  color: #ffffff;\n  display: block;\n  padding: 19px 20px;\n  text-decoration: none;\n  text-shadow: none;\n}\n#TOC ul {\n  list-style: none;\n}\n#TOC > ul > li {\n  display: inline-block;\n  float: left;\n  margin: 0;\n}\n#TOC > ul > li > a {\n  color: #ffffff;\n}\n#TOC > ul > li:hover:after {\n  content: '';\n  display: block;\n  width: 0;\n  height: 0;\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  border-left: 10px solid transparent;\n  border-right: 10px solid transparent;\n  border-bottom: 10px solid #0fa1e0;\n  margin-left: -10px;\n}\n#TOC > ul > li:first-child > a {\n  border-radius: 5px 0 0 0;\n}\n#TOC.align-right > ul > li:first-child > a,\n#TOC.align-center > ul > li:first-child > a {\n  border-radius: 0;\n}\n#TOC.align-right > ul > li:last-child > a {\n  border-radius: 0 5px 0 0;\n}\n#TOC > ul > li.active > a,\n#TOC > ul > li:hover > a {\n  color: #ffffff;\n  box-shadow: inset 0 0 3px #000000;\n  background: #070707;\n  background: linear-gradient(to bottom, #262626 0%, #070707 100%);\n}\n#TOC .has-sub {\n  z-index: 1;\n}\n#TOC .has-sub:hover > ul {\n  display: block;\n}\n#TOC .has-sub ul {\n  display: none;\n  position: absolute;\n  width: 200px;\n  top: 100%;\n  left: 0;\n}\n#TOC .has-sub ul li a {\n  background: #0fa1e0;\n  border-bottom: 1px dotted #31b7f1;\n  filter: none;\n  display: block;\n  line-height: 120%;\n  padding: 10px;\n  color: #ffffff;\n}\n#TOC .has-sub ul li:hover a {\n  background: #0c7fb0;\n}\n#TOC ul ul li:hover > a {\n  color: #ffffff;\n}\n#TOC .has-sub .has-sub:hover > ul {\n  display: block;\n}\n#TOC .has-sub .has-sub ul {\n  display: none;\n  position: absolute;\n  left: 100%;\n  top: 0;\n}\n#TOC .has-sub .has-sub ul li a {\n  background: #0c7fb0;\n  border-bottom: 1px dotted #31b7f1;\n}\n#TOC .has-sub .has-sub ul li a:hover {\n  background: #0a6d98;\n}\n#TOC ul ul li.last > a,\n#TOC ul ul li:last-child > a,\n#TOC ul ul ul li.last > a,\n#TOC ul ul ul li:last-child > a,\n#TOC .has-sub ul li:last-child > a,\n#TOC .has-sub ul li.last > a {\n  border-bottom: 0;\n}\n#TOC ul {\n  font-size: 1.2rem;\n}\n",
+    "created" : 1486690516091.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "399576254",
+    "id" : "C13FD774",
+    "lastKnownWriteTime" : 1484752901,
+    "last_content_update" : 1484752901,
+    "path" : "~/Documents/bookdown/pmeasyr-book/toc.css",
+    "project_path" : "toc.css",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "css"
+}

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "--- \ntitle: \"Traitement des données PMSI avec R\"\nauthor: \"Guillaume Pressiat || SIMAP / DOMU / Assistance Publique - Hôpitaux de Paris\"\ndate: \"`r Sys.Date()`\"\nsite: bookdown::bookdown_site\noutput: bookdown::gitbook\ndocumentclass: book\nlink-citations: yes\ndescription: \"Ce livre numérique présente des exemples de traitements de données PMSI avec R\"\n---\n\n\n# Introduction\n\nCe livret numérique présente des exemples de traitements de données PMSI avec R. L'objectif est de concentrer ici :\n\n  - une documentation permettant de débuter avec l'import de données via le package [*pmeasyr*](https://github.com/IM-APHP/pmeasyr)\n  \n  - des exemples d'analyses PMSI :\n    - requêtes sur les diagnostics et les actes\n    - analyse des files actives pour une pathologie\n    - statistiques élementaires sur des variables du PMSI\n    - analyse du case-mix et de la dms par ghm\n",
+    "created" : 1486816001588.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4065740190",
+    "id" : "D4102BF4",
+    "lastKnownWriteTime" : 1486903192,
+    "last_content_update" : 1486903192668,
+    "path" : "~/Desktop/pmeasyr-book/index.Rmd",
+    "project_path" : "index.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

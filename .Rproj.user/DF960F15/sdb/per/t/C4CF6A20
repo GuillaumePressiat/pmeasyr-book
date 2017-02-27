@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Requêtes sur des pathologies / actes \n\n## Transposition des codes diagnostics\n\nLes analyses sur les diagnostics CIM-10 sont parfois fastidieuses du fait des multiples positions de diagnostics : DP principal du séjour, DR principal du séjour, DPUM, DRUM, DAS. La fonction *tdiag* permet de rassembler tous les diagnostics dans une seule table.\n\n```{r eval = F}\n# Pour les objets rsa et rum du MCO\n# Transbahuter tous les diagnostics dans une seule table\ntdiag(rsa15) -> rsa15 # \"Tidy diagnostics\"\nView(rsa15$diags)\n# Tous les diagnostics sont dans une table, avec un numero selon leur position  \n# 1:DP, 2:DR, 3:DPUM, 4:DRUM, 5:DAS\n```\n\nExemple de résultat : \n\n|CLE_RSA   |NSEQRUM|position| diag |\n|:---------|:------|--------|------|\n|0000000001|     01|       1|  Z511|\n|0000000001|     01|       2|   C18|\n|0000000002|     01|       1|  C501|\n|0000000002|     01|       3|  C501|\n|0000000002|     02|       1|  D051|\n|0000000002|     02|       5|  E109|\n\n## Recherche de codes diagnostics\n\nL'objectif est de récupérer les séjours présentant un code diagnostic de la liste\n\n```{r eval = F}\n# Liste D-0103 de la fonction groupage 2016 : Epilepsies\nliste_diag = c('F803', 'G400', 'G401', 'G402', 'G403', 'G404', \n               'G405', 'G406', 'G407', 'G408', 'G409', 'G410', \n               'G411', 'G412', 'G418', 'G419', 'R568')\n\n# En passant par la table diags\ntdiag(rsa15) -> rsa15\n\nlibrary(dplyr)\n# quelle que soit la position du diagnostic\nrsa15$diags %>% filter(diag %in% liste_diag)\n# position en das\nrsa15$diags %>% filter(diag %in% liste_diag, position == 5)\n# position en dp dr\nrsa15$diags %>% filter(diag %in% liste_diag, position < 5)\n\n# En passant par les zones stream\nstring_diags = \n  'F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|418|G419|R568'\n\n# quelle que soit la position du diagnostic\nrsa15$rsa %>% fiter(grepl(string_diags, dpdrum)|grepl(string_diags, das))\n# position en das\nrsa15$rsa %>% fiter(grepl(string_diags, das))\n# position en dpdr\nrsa15$rsa %>% fiter(grepl(string_diags, dpdrum))\n```\n\n## Recherche de codes actes\n\n```{r eval = F}\n# Code EBLA003\n\nlibrary(dplyr)\n# En passant par la table actes\nrsa15$actes %>% filter(CDCCAM == 'EBLA003')\n# En passant par la zone stream\nrsa15$rsa %>% filter(grepl('EBLA003', actes))\n```\n\n",
+    "created" : 1486911518840.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1328327053",
+    "id" : "C4CF6A20",
+    "lastKnownWriteTime" : 1486909357,
+    "last_content_update" : 1486909357,
+    "path" : "~/Desktop/pmeasyr-book/04-requetes_pmsi.Rmd",
+    "project_path" : "04-requetes_pmsi.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
