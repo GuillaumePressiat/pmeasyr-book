@@ -44,7 +44,7 @@ rsa15$rsa %>% count(GHM, NOGHS)
 
 # DMS par GHM / GHS
 rsa15$rsa %>% group_by(GHM, NOGHS) %>%
-  summarise(dms = dms = mean(DUREE[DUREE > 0]),
+  summarise(dms = mean(DUREE[DUREE > 0]),
             effectif = n(),
             effectif_sup0 = sum(DUREE > 0))
 ```
