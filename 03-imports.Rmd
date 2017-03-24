@@ -118,6 +118,7 @@ Les fonctions d'imports pour ces champs PMSI reposent sur le même principe qu'e
 |[iano_had](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/iano_had.Rmd)   |~ HAD - Import des Anohosp            |
 |[imed_had](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/imed_had.Rmd)   |~ HAD - Import des Med                |
 |[irapss](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/irapss.Rmd)     |~ HAD - Import des RAPSS              |
+|[ileg_had](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/ileg_had.Rmd)     |~ HAD - Import des erreurs LEG        |
 
 ```{r eval = F}
 library(pmeasyr)
@@ -135,6 +136,9 @@ irapss(finess = 750712184,
 |[iano_ssr](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/iano_ssr.Rmd)   |~ SSR - Import des Anohosp            |
 |[irha](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/irha.Rmd)       |~ SSR - Import des RHA                |
 |[issrha](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/issrha.Rmd)     |~ SSR - Import des SSRHA              |
+|[imed_ssr](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/imed_ssr.Rmd)     |~ SSR - Import des MED              |
+|[iium_ssr](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/iium_ssr.Rmd)     |~ SSR - Import des UM              |
+|[ileg_ssr](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/ileg_ssr.Rmd)     |~ SSR - Import des erreurs LEG        |
 
 
 ```{r eval = F}
@@ -197,4 +201,14 @@ dico(rsa15$rsa)
 # Charger les formats de toutes les tables prises en charge par le package
 pmeasyr::formats
 ```
+
+
+## Labels
+
+```{r eval = F}
+# Obtenir le libelle d'une variable du PMSI
+labeleasier(rsa15$rsa$SEXE, Sexe = T)
+labeleasier(rsa15$rsa$ECHPMSI, Mode_entree = T)
+```
+
 
