@@ -6,3 +6,5 @@ Toutes les fonctions du package ont une page d'aide :
 # Exemple : aide sur la fonction d'import des rsa
 ?irsa
 ```
+
+L'aide en ligne est disponible [ici](https://im-aphp.github.io/pmeasyr).
