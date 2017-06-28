@@ -125,7 +125,7 @@ Publique - Hôpitaux de Paris}
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-03-24}
+  \date{2017-06-28}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -914,14 +914,14 @@ la liste
 
 \CommentTok{# En passant par les zones stream}
 \NormalTok{string_diags =}\StringTok{ }
-\StringTok{  'F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|418|G419|R568'}
+\StringTok{  'F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|G418|G419|R568'}
 
 \CommentTok{# quelle que soit la position du diagnostic}
-\NormalTok{rsa15$rsa %>%}\StringTok{ }\KeywordTok{fiter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(string_diags, dpdrum)|}\KeywordTok{grepl}\NormalTok{(string_diags, das))}
+\NormalTok{rsa15$rsa %>%}\StringTok{ }\KeywordTok{filter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(string_diags, dpdrum)|}\KeywordTok{grepl}\NormalTok{(string_diags, das))}
 \CommentTok{# position en das}
-\NormalTok{rsa15$rsa %>%}\StringTok{ }\KeywordTok{fiter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(string_diags, das))}
+\NormalTok{rsa15$rsa %>%}\StringTok{ }\KeywordTok{filter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(string_diags, das))}
 \CommentTok{# position en dpdr}
-\NormalTok{rsa15$rsa %>%}\StringTok{ }\KeywordTok{fiter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(string_diags, dpdrum))}
+\NormalTok{rsa15$rsa %>%}\StringTok{ }\KeywordTok{filter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(string_diags, dpdrum))}
 \end{Highlighting}
 \end{Shaded}
 
