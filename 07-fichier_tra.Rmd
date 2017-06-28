@@ -12,8 +12,8 @@ Le fichier TRA est un fichier du *out* qui permet de relier les données anonyme
 
 | Type     |Import                              |
 |---------:|:-----------------------------------|
-|[itra](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/itra.Rmd)      |~ TRA - Import du TRA               |
-|[inner_tra](https://github.com/IM-APHP/pmeasyr/tree/master/Rd_md/inner_tra.Rmd) |~ TRA - Ajout du TRA aux données Out|
+|[itra](https://im-aphp.github.io/pmeasyr/reference/itra.html)      |~ TRA - Import du TRA               |
+|[inner_tra](https://im-aphp.github.io/pmeasyr/reference/inner_tra.html) |~ TRA - Ajout du TRA aux données Out|
 
 ## Ajout du TRA en MCO
 

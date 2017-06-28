@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/gui/Documents/github/pmeasyr-book/pmeasyr-book/.Rbuildignore="D860C9D4"
 /home/gui/Documents/github/pmeasyr-book/pmeasyr-book/.gitignore="72C4AD4C"
 /home/gui/Documents/github/pmeasyr-book/pmeasyr-book/.travis.yml="C29F551E"
@@ -13,3 +14,14 @@
 /home/gui/Documents/github/pmeasyr-book/pmeasyr-book/preamble.tex="47CB3AB4"
 /home/gui/Documents/github/pmeasyr-book/pmeasyr-book/style.css="EB08BE26"
 /home/gui/Documents/github/pmeasyr-book/pmeasyr-book/toc.css="E2415EE5"
+=======
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/01-contexte.Rmd="594C18D1"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/02-archives.Rmd="DCEBA1A6"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/03-imports.Rmd="2EF73B2C"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/04-requetes_pmsi.Rmd="BE24461F"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/05-patients1.Rmd="3F57AAB2"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/07-fichier_tra.Rmd="4564F488"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/08-statistiques_bases.Rmd="C06A3558"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/09-Help.Rmd="4D8E8048"
+/Users/guillaumepressiat/Github/pmeasyr-book/pmeasyr-book/index.Rmd="116028DD"
+>>>>>>> e89f4e17d67ec0d267555d332201938dda3c85c7
