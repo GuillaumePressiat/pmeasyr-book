@@ -47,14 +47,14 @@ rsa15$diags %>% filter(diag %in% liste_diag, position < 5)
 
 # En passant par les zones stream
 string_diags = 
-  'F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|418|G419|R568'
+  'F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|G418|G419|R568'
 
 # quelle que soit la position du diagnostic
-rsa15$rsa %>% fiter(grepl(string_diags, dpdrum)|grepl(string_diags, das))
+rsa15$rsa %>% filter(grepl(string_diags, dpdrum)|grepl(string_diags, das))
 # position en das
-rsa15$rsa %>% fiter(grepl(string_diags, das))
+rsa15$rsa %>% filter(grepl(string_diags, das))
 # position en dpdr
-rsa15$rsa %>% fiter(grepl(string_diags, dpdrum))
+rsa15$rsa %>% filter(grepl(string_diags, dpdrum))
 ```
 
 ## Recherche de codes actes

@@ -7,7 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Traitement des données PMSI avec R</title>
   <meta name="description" content="Ce livre numérique présente des exemples de traitements de données PMSI avec R">
+<<<<<<< HEAD
   <meta name="generator" content="bookdown 0.5.10 and GitBook 2.6.7">
+=======
+<<<<<<< HEAD
+  <meta name="generator" content="bookdown 0.4.1 and GitBook 2.6.7">
+=======
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+>>>>>>> e89f4e17d67ec0d267555d332201938dda3c85c7
+>>>>>>> origin/master
 
   <meta property="og:title" content="Traitement des données PMSI avec R" />
   <meta property="og:type" content="book" />
@@ -25,7 +33,15 @@
 <meta name="author" content="Guillaume Pressiat || SIMAP / DOMU / Assistance Publique - Hôpitaux de Paris">
 
 
+<<<<<<< HEAD
 <meta name="date" content="2017-11-19">
+=======
+<<<<<<< HEAD
+<meta name="date" content="2017-06-28">
+=======
+<meta name="date" content="2017-06-18">
+>>>>>>> e89f4e17d67ec0d267555d332201938dda3c85c7
+>>>>>>> origin/master
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -302,14 +318,22 @@ rsa15<span class="op">$</span>diags <span class="op">%&gt;%</span><span class="s
 
 <span class="co"># En passant par les zones stream</span>
 string_diags =<span class="st"> </span>
-<span class="st">  &#39;F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|418|G419|R568&#39;</span>
+<span class="st">  &#39;F803|G400|G401|G402|G403|G404|G405|G406|G407|G408|G409|G410|G411|G412|G418|G419|R568&#39;</span>
 
 <span class="co"># quelle que soit la position du diagnostic</span>
+<<<<<<< HEAD
 rsa15<span class="op">$</span>rsa <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fiter</span>(<span class="kw">grepl</span>(string_diags, dpdrum)<span class="op">|</span><span class="kw">grepl</span>(string_diags, das))
 <span class="co"># position en das</span>
 rsa15<span class="op">$</span>rsa <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fiter</span>(<span class="kw">grepl</span>(string_diags, das))
 <span class="co"># position en dpdr</span>
 rsa15<span class="op">$</span>rsa <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fiter</span>(<span class="kw">grepl</span>(string_diags, dpdrum))</code></pre></div>
+=======
+rsa15$rsa %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(string_diags, dpdrum)|<span class="kw">grepl</span>(string_diags, das))
+<span class="co"># position en das</span>
+rsa15$rsa %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(string_diags, das))
+<span class="co"># position en dpdr</span>
+rsa15$rsa %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(string_diags, dpdrum))</code></pre></div>
+>>>>>>> origin/master
 </div>
 <div id="recherche-de-codes-actes" class="section level2">
 <h2><span class="header-section-number">5.3</span> Recherche de codes actes</h2>
