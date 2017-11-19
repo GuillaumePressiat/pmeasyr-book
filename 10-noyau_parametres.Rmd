@@ -1,0 +1,86 @@
+# Noyau de paramètres
+
+## Quatre paramètres
+
+Les fonctions de dézippage et d’import de pmeasyr ont en commun quatre paramètres :
+
+- le finess du fichier
+- l’année pmsi
+- le mois pmsi
+- le path, repértoire où se trouve le fichier
+
+Ces paramètres sont toujours nécessaires : définir un noyau de paramètres permet de ne les préciser une seule fois, allège le code pour plus de lisibilité.
+
+**Exemple de redondance des paramètres :**
+
+```{r eval = F}
+# Exemple
+library(pmeasyr)
+
+# Dézipper
+adezip(finess = '750712184', 
+       annee  = 2015, 
+       mois   = 12, 
+       path   = '~/Documents/data/mco/',
+       type   = "out", 
+       liste  = c("rsa", "ano", "tra"))
+
+# Table ano
+iano_mco(finess = '750712184', 
+         annee  = 2015, 
+         mois   = 12, 
+         path   = '~/Documents/data/mco/') -> ano
+
+# Tables rsa
+irsa(finess = '750712184', 
+     annee  = 2015, 
+     mois   = 12, 
+     path   = '~/Documents/data/mco/', 
+     typi   = 4) -> rsa
+
+# Table tra
+itra(finess = '750712184', 
+     annee  = 2015, 
+     mois   = 12, 
+     path   = '~/Documents/data/mco/') -> tra
+```
+
+## Solution avec `noyau_pmeasyr()`
+
+### Définir le noyau de paramètres
+
+```{r eval = F}
+library(pmeasyr)
+p <- noyau_pmeasyr(finess = '750712184', 
+                   annee = 2015, 
+                   mois = 12, 
+                   path   = '~/Documents/data/mco/')
+```
+
+### Utiliser le noyau de paramètres
+
+```{r eval = F}
+# Tout dézipper
+# out
+p %>% adezip(type = "out")
+# in
+p %>% adezip(type = "in")
+```
+
+```{r eval = F}
+p %>% irsa()     -> rsa
+p %>% iano_mco() -> ano_out
+p %>% itra()     -> tra
+```
+
+La syntaxe est beaucoup plus lisible désormais.
+
+## `noyau_skeleton()`
+
+La fonction `noyau_skeleton()` permet d'obtenir dans la console R le squelette pour définir les quatre paramètres d'un noyau `pmeasyr`.
+
+```{r eval = T}
+library(pmeasyr)
+noyau_skeleton()
+```
+

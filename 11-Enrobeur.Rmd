@@ -1,0 +1,42 @@
+# Restructurer des listes de codes : enrobeur
+
+La fonction `enrobeur()` permet de structurer une liste de diagnostics, de ghm ou de codes CCAM sous différents formats, selon le type de requêtes que l'on souhaite effectuer ensuite.
+
+
+### Pour du SQL %like% %..% (left & right)
+
+```{r}
+library(magrittr)
+li <- c('QEFA003', 'QEFA005', 'QEFA010', 'QEFA013', 'QEFA015', 'QEFA019', 'QEFA020')
+
+enrobeur(li, robe="\'%", interstice="\n", symetrique = T) %>% cat()
+```
+
+### SQL %like% ..% 
+
+-- 
+à venir
+--
+
+### SQL %like% %.. 
+
+-- 
+à venir
+--
+
+### Pour du grepl
+
+```{r}
+li <- c('QEFA003', 'QEFA005', 'QEFA010', 'QEFA013', 'QEFA015', 'QEFA019', 'QEFA020')
+
+enrobeur(li, robe="", interstice="|") %>% cat()
+```
+
+### Pour du listing 
+
+```{r}
+li <- c('QEFA003', 'QEFA005', 'QEFA010', 'QEFA013', 'QEFA015', 'QEFA019', 'QEFA020')
+
+enrobeur(li, robe="\'", interstice=", ") %>% cat()
+```
+

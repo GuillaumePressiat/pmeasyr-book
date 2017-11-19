@@ -28,6 +28,27 @@ emplacement <- "~/Documents/data"
 sapply(champs, function(x){dir.create(file.path(emplacement, x))})
 ```
 
+
+### Sous Unix
+
+Chaque utilisateur dispose de son path '~', qui équivaut par exemple à : '/home/gui/'.
+
+### Sous Windows
+
+Chaque utilisateur dispose de son répertoire, exemple `C:/Users/gui/`. Et souvent, sans l’utilisation de projets RStudio, les chemins d’accès aux données sont pénibles à configurer dans chaque programme.
+
+Mais dans R, le symbole '~' utilisé sur windows dans un chemin d’accès aux fichiers renvoie au répertoire Documents de l’utilisateur : `C:/Users/gui/Documents`.
+
+```{r eval = F}
+path.expand('~')
+```
+
+renvoie `C:/Users/gui/Documents/`.
+
+Par conséquent sur Windows le répertoire à créer pour localiser les fichiers d’archives pmsi sera : `C:/Users/gui/Documents/Documents/data`.
+
+**N.B.: Nous proposons ici que les utilisateurs de `pmeasyr` utilisent ce chemin générique pour leurs programmes. L'avantage qui en découle : le partage de programme ne nécessite pas de changer le chemin d'accès, puisque c'est le même.**
+
 ## Informations sur les archives
 
 Le nom des fonctions dont l'objectif est de manipuler les **a**rchives commence par **a**.

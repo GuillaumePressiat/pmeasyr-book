@@ -1,0 +1,90 @@
+# Vers la base de données avec `pmeasyr`
+
+Constatant que chaque étude avec `pmeasyr` commence par un import de données, nous proposons une nouvelle approche : intégrer une fois pour toutes les données M12 dans une base de données managée et accessible avec `pmeasyr`. Les données en cours d'année pouvant également y être intégrées. 
+
+Nous décrivons ici l'import de données MCO 2016 dans une base de données tel qu'il est possible de le réaliser à l'aide de `pmeasyr`.
+
+## Connexion à une base de données
+
+### monetdb
+
+```{r, eval = F}
+dbdir <- "~/Documents/data/monetdb"
+con <- MonetDBLite::src_monetdblite(dbdir)
+```
+
+
+### SQLite
+
+```{r, eval = F}
+dbdir <- "~/Documents/data/sqlite/pmsi.sqlite"
+con <- dplyr::src_sqlite(dbdir)
+```
+
+### PostGres
+
+```{r, eval = F}
+con <- dplyr::src_postgres(user = "gui", password = "gui", dbname = "aphp",
+                    host = "localhost", port = 5432)
+```
+
+## Intégration en base
+
+
+### Définition des paramètres
+
+```{r eval = F}
+# noyau_skeleton()
+p <- noyau_pmeasyr(
+  finess   = '750712184',
+  mois     = 12,
+  path     = '~/Documents/data/mco',
+  progress = F, 
+  tolower_names = T, # choix de noms de colonnes minuscules : T / F
+  n_max = 1e4, # on limite la lecture a un petit nombre de lignes pour tester d'abord 
+  # on importera tout dans un second temps
+  lib = F) # pas de libellés de colonnes (inutile ici)
+```
+
+
+### Exemple d'import 
+
+
+
+
+```{r eval = F}
+purrr::quietly(db_mco_out)(con,  p, annee = 2016) -> ok 
+```
+
+`ok` contient toutes les sorties de l'éxécution de la fonction : vérifier qu'il n'y a pas d'erreur ou d'avertissement anormal avant de poursuivre. Ok ? Voyons ce que contient `ok` :
+
+```{r eval = F}
+ok
+```
+
+Nous avons présenté la ligne pour importer les données MCO out 2016, mais il est possible de la faire pour le MCO in (`db_mco_in`), le SSR out (`db_ssr_out`), l'HAD (`db_had_out`), la Psy (`db_psy_out`) et les rsf (`db_rsf_out`).
+
+Une fonction pour importer une autre table est également disponible (`db_generique`).
+
+## Accéder aux données dans la base
+
+Poursuivons l'exemple sur le mco out 2016.
+
+### Lister les tables dans la base
+
+```{r eval = F}
+db_liste_tables(con)
+```
+
+### Accéder aux tables mco out
+
+Les lignes suivantes permettent de se connecter aux tables dans la base. Pour la suite il pourra être intéressant de lire [l'aide du package dplyr](http://db.rstudio.com/dplyr/).
+
+```{r eval = F}
+tbl_mco(con, 16, 'rsa_rsa') # Table rsa
+tbl_mco(con, 16, 'rsa_actes') # Table actes des rsa
+tbl_mco(con, 16, 'rsa_diags') # Table diags des rsa (après `tdiag`)
+tbl_mco(con, 16, 'rsa_um') # Table um des rsa 
+```
+
+D'autres fonctions `tbl_ssr`, `tbl_had`, `tbl_had`, `tbl_psy`, `tbl_rsf` facilitent la connexion à ces "remote table". 

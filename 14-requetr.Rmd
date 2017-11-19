@@ -1,0 +1,121 @@
+# requetr : rédiger, exécuter des requêtes pmsi (beta)
+
+Cette partie de `pmeasyr` concerne la rédaction et l'exécution de requêtes pmsi. Quelques exemples d'abord puis une présentation de ce qu'il est possible de faire avec (et, de manière complémentaire, de ce qu'il n'est pas possible de faire).
+
+
+## Définir une requête
+
+### Exemple simple
+
+```{r eval = F}
+requete_simple <- list(
+  actes = "EPLF002", 
+  activites_actes = "1"
+)
+```
+
+Ici on cherchera tous les séjours avec un acte EPLF002 codé en activité 1.
+
+### Exemple plus complexe
+
+```{r eval = F}
+requete_complexe = list(diags = "E66", 
+                        positions_diags = 5, 
+                        dureemax = 0,
+                        ghm = '28Z',
+                        agemax = 18,
+                        diags_exclus = "C")
+
+# positions_diags : 1 dp rsa, 2 dr rsa, 3 dp um, 4 dr um, 5 das
+```
+
+Ici on cherchera tous les séjours avec un diagnostic E66 en das, d'une durée de 0 jour, avec un ghm en 28Z, où l'âge du patient est au maximum 18 ans, et sans aucun diagnostic commençant par C.
+
+## Requêtes sur des rsa importés avec `irsa`
+
+Il faut d'abord importer les rsa avec un type d'import 6 et "préparer les rsa" avec la fonction `prepare_rsa()` : 
+
+```{r eval = F}
+irsa(p, typi = 6) -> rsa
+prepare_rsa(rsa) -> rsa
+```
+
+Exemple de requêtes : 
+
+```{r eval = F}
+exemple_requete <- list(
+  actes = c('QEFA003','QEFA005','QEFA010','QEFA013','QEFA015','QEFA019','QEFA020')
+)
+```
+
+La commande suivante renvoie un `tibble` (tableau) contenant les clés rsa correspondants à cette requête : 
+
+```{r eval = F}
+requete(rsa, exemple_requete)
+```
+
+Il est possible de retourner d'autres variables que la clé rsa uniquement, en les spécifiant : 
+
+```{r eval = F}
+requete(rsa, exemple_requete, vars = c('nas', 'agean', 'actes', 'diags', 'ghm'))
+```
+
+## Requêtes sur des rsa dans la base de données
+
+C'est le même principe seulement il faut spécifier la connexion à la table et l'année de la requête plutôt que l'objet rsa : 
+
+```{r eval = F}
+requete_db(con, 16, exemple_requete, vars = c('nas', 'agean', 'actes', 'diags', 'ghm'))
+```
+
+
+## Éléments possibles pour une requête
+
+```{r eval = T, echo = F}
+
+tibble::tribble(
+~"Élément" , ~"Commentaire",
+"agemin",  "Âge minimum en années (inclus)",
+"agejrmin","Âge minimum en jours (inclus)",
+"agejrmax", "Âge maximum en jours (inclus)",
+"agemax","Âge maximum en années (inclus)",
+"dureemin", "Durée minimum en jours (inclus)",
+"dureemax", "Durée maximum en jours (inclus)",
+"ghm","Liste de ghm ou racine de ghm : exemple : 08C24, 08C241",
+"diags_exclus","Diagnostics à exclure en toutes positions",
+"poidsmin","Poids minimum (inclus)",
+"poidsmax","Poids maximum (inclus",
+"ghm_exclus","ghm à exclure en toutes positions",
+"autres","Autres éléments de requête au niveau rsa partie fixe, exemple 'agegest < 37'",
+"diags","Diagnostic ou liste de diagnostics à rechercher",
+"positions_diags","Positions des diagnostics à chercher, voir les positions de la table diags (de 1 à 5)",
+"actes","Acte ou liste d'actes à rechercher",
+"activites_actes","Activité pour laquelle chercher les actes") %>% knitr::kable()
+```
+
+## Lancer plusieurs requêtes
+
+Les fonctions `lancer_requete()` et `lancer_requete_db()` permettent de lancer une ou plusieurs requêtes lorsque l'on a défini une liste de requêtes.
+
+### Exemple de liste de requêtes
+
+```{r eval = F}
+deux_requetes <- list(requete_1 = list(actes = "EBLA003", nom = "pac", thematique = "pac"),
+                      requete_2 = list(ghm = "28Z", nom = "seances", thematique = "CMD 28")
+)
+```
+
+### Lancement 
+
+```{r eval = F}
+# Pour des rsa importés avec irsa
+lancer_requete(rsa, deux_requetes, vars = c('nas', 'duree', 'ghm'))
+
+# Pour des rsa dans une base de données
+lancer_requete_db(con, 16, deux_requetes, vars = c('nas', 'duree', 'ghm'))
+```
+
+La commande suivante renvoie un `tibble` (tableau) contenant les clés rsa correspondants à ces requêtes avec deux variables identifiant le nom et la thématique de la requête correspondante.
+
+
+
