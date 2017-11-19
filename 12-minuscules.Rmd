@@ -4,5 +4,5 @@ Dans chaque fonction, un nouveau paramètre est disponible : `tolower_names`. Il
 
 Par homogénéité avec le format jusqu'alors, la valeur par défaut de ce paramètre reste `FALSE`, les noms de variables restent donc en majuscule sans modifier ce paramètre.
 
-**N.B. : Pour utiliser les fonctions `requete`, `requete_db`, `lancer_requete` et `lancer_requete_db`, il est nécessaire d'avoir choisi un import avec noms de variables en minuscule : `tolower_names = TRUE`.
+**N.B. : Pour utiliser les fonctions `requete`, `requete_db`, `lancer_requete` et `lancer_requete_db`, il est nécessaire d'avoir choisi un import avec noms de variables en minuscule : `tolower_names = TRUE`.**
 

@@ -66,7 +66,17 @@ Nous avons présenté la ligne pour importer les données MCO out 2016, mais il 
 
 Une fonction pour importer une autre table est également disponible (`db_generique`).
 
+
+Après plusieurs imports dans la base de données, se déconnecter : 
+
+```{r eval = F}
+DBI::dbDisconnect(con$con)
+```
+
+
 ## Accéder aux données dans la base
+
+Se reconnecter à la base en redéfinissant l'objet `con`.
 
 Poursuivons l'exemple sur le mco out 2016.
 
