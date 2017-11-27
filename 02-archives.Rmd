@@ -80,7 +80,7 @@ Les fonctions permettent de dézipper les fichiers depuis `R` en ligne de comman
 
 |Nom       |Fonction                                                                               |
 |:---------|:--------------------------------------------------------------------------------------|
-|[adezip](https://im-aphp.github.io/pmeasyr/reference/adezip.html)    |~ *.zip - Dezippe des fichiers de larchive PMSI                                        |
+|[adezip](https://im-aphp.github.io/pmeasyr/reference/adezip.html)    |~ *.zip - Dezippe des fichiers de l'archive PMSI                                        |
 |[adezip2](https://im-aphp.github.io/pmeasyr/reference/adezip2.html)   |~ *.zip - Dezippe des fichiers de l'archive PMSI, avec en parametre le nom de l'archive|
 
 

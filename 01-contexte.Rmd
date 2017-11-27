@@ -23,7 +23,7 @@ L'utilisation de R confère aux données du PMSI la liberté proposée par le lo
    - les requêtes sur les diagnostics et les actes peuvent s'écrire de multiples façons et c'est l'utilisateur qui crée ses propres programmes
    - les données sont dans R : prêtes pour des modèles linéaires, logistiques, des classifications...
    - la confrontation des données in\* (reflet du codage des établissements) aux données out\* (reflet de la valorisation accordée à l'établissement) est facilitée par l'import du fichier tra, cela peut permettre aux équipes DIM d'améliorer leur recueil
-   - le reporting de l'activité en excel, pdf, word, html, ou en créant des applications ([shiny](http://shiny.rstudio.com))
+   - le reporting de l'activité vers différents formats (Excel, PDF, Word, HTML) ou en créant des applications ([shiny](http://shiny.rstudio.com))
    - l'utilisation des graphiques pour représenter des volumes d'activités et des cartographies interactives pour visualiser la localisation d'activités, de patientèles, et les flux de patients
    - le partage de projets RStudio, qui facilite et encourage les travaux en équipe.
 
@@ -33,7 +33,7 @@ L'utilisation de R confère aux données du PMSI la liberté proposée par le lo
 
 L'engouement autour de R est lié au développement de packages intuitifs et performants : [*readr*](http://readr.tidyverse.org), [*dplyr*](https://github.com/hadley/dplyr), [*tidyr*](http://tidyr.tidyverse.org), [*magrittr*](https://github.com/tidyverse/magrittr), pour n'en citer que quelques-uns. [*pmeasyr*](https://github.com/IM-APHP/pmeasyr) s'appuie sur ces packages pour proposer des imports de données rapides sur des fichiers de taille importante (l'entité juridique de l'AP-HP est prise en charge sans problème avec un ordinateur récent).
 
-Dans le cas de [*pmeasyr*](https://github.com/IM-APHP/pmeasyr), l'import de 100 000 rsa (partie fixe, parsing des passages unités médicales, des diagnostics associés et des actes) nécessite en moyenne 5 secondes avec un processeur i7 -- 16Go de ram.
+Dans le cas de [*pmeasyr*](https://github.com/IM-APHP/pmeasyr), l'import de 100 000 RSA (partie fixe, parsing des passages unités médicales, des diagnostics associés et des actes) nécessite en moyenne 5 secondes avec un processeur i7 -- 16Go de ram.
 
 En dernier ressort, R travaillant en mémoire vive, les exécutions de requêtes sont très rapides. 
 
@@ -45,10 +45,8 @@ Il est utilisé depuis un an à l'AP-HP pour des analyses d'activité et la desc
 
 ## Installation du package
 
-
 ```{r echo = T, eval = F} 
 devtools::install_github('IM-APHP/pmeasyr')
 ``` 
-
 
 Cette commande lance l'installation du package et de ses dépendances.
