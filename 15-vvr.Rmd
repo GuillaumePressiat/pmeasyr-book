@@ -1,0 +1,166 @@
+# vvr : Valoriser les rsa
+
+*Valorisation, cf [wikipédia](https://fr.wikipedia.org/wiki/Valorisation)*
+
+- *processus de détermination de la valeur d'un objet, d'un actif, d'une entité. L'objectif est d'établir un prix.*
+- *processus visant à améliorer la valeur de cet objet, actif, entité*
+
+Cette partie de `pmeasyr` permet de constituer des tables contenant les informations de valorisation de chaque rsa, en accord avec la valorisation epmsi, donc avec la valorisation VisualValoSej (VVS, d'où le choix du nom vvr).
+
+Trois étapes sont distinguées pour reproduire la valorisation d'un rsa : 
+
+- disposer des référentiels de tarifs
+- une étape autour du séjour : la valorisation GHS + suppléments, etc
+- une étape autour de la facture : le caractère facturable ou non du séjour est déterminé.
+
+Pour ces deux dernières étapes, la logique retenue a été la suivante : deux fonctions permettent de constituer une table séjour (rsa) et une table facture (ano) contenant les variables utiles.
+
+
+## Accéder aux tarifs depuis R
+
+Le package intitulé [nomensland](https://guillaumepressiat.github.io/nomensland/index.html) contient un ensemble de référentiels utiles dans le PMSI, parmi lesquels les tarifs GHS et suppléments du MCO pour les établissements publics.
+
+Il est nécessaire d'installer ce package ou de disposer de tables dont la structure et les noms de colonnes sont identiques à celles de ce package pour pouvoir continuer.
+
+```{r eval = FALSE}
+tarifs      <- nomensland::get_table('tarifs_mco_ghs') %>% distinct(ghs, anseqta, .keep_all = TRUE)
+supplements <- nomensland::get_table('tarifs_mco_supplements') %>% mutate_if(is.numeric, tidyr::replace_na, 0)
+```
+
+## Étape séjour
+
+Il y a plusieurs possibilités pour cette étape : valoriser uniquement les GHS + bornes extrêmes, ou bien valoriser l'intégralité des rubriques de valorisation.
+
+Mais il faut d'abord préparer la table rsa spécifique à la valorisation.
+
+### Préparation des rsa
+
+```{r eval = F}
+# avec un noyau pmeasyr (importer les données)
+annee <- 18
+p <- noyau_pmeasyr(
+  finess   = '750712184',
+  annee    = 2000 + annee,
+  mois     = 6,
+  path     = '~/Documents/data/mco',
+  progress = FALSE,
+  n_max    = Inf,
+  lib      = FALSE,
+  tolower_names = TRUE)
+
+vrsa <- vvr_rsa(p)
+
+# depuis une base de données (collecter les données)
+dbdir <- "~/Documents/data/monetdb"
+con <- src_monetdblite(dbdir)
+
+vrsa <- vvr_rsa(con, annee)
+```
+
+
+### Calculer la valorisation GHS borne extrême haut + extrême bas
+
+```{r  eval = F}
+# Recette GHS de base et suppléments EXB, EXH
+rsa_v <- vvr_ghs_supp(rsa = vrsa, tarifs = tarifs)
+```
+
+
+### Calculer la valorisation GHS borne extrême haut + extrême bas et suppléments
+
+```{r  eval = F}
+# Recette GHS de base, EXB, EXH, et suppléments
+rsa_v <- vvr_ghs_supp(vrsa, tarifs, supplements, vano, ipo(p), idiap(p), pie = ipie(p), bee = FALSE)
+
+```
+
+## Étape facture
+
+### Préparation des ano
+
+```{r eval = FALSE}
+## Not run: 
+# avec un noyau pmeasyr (importer les données)
+p <- noyau_pmeasyr(
+  finess   = '750712184',
+  annee    = 2000 + 18,
+  mois     = 4,
+  path     = '~/Documents/data/mco',
+  progress = FALSE,
+  n_max    = Inf,
+  lib      = FALSE,
+  tolower_names = TRUE)
+
+vano <- vvr_ano_mco(p)
+
+# depuis une base de données (collecter les données)
+dbdir <- "~/Documents/data/monetdb"
+con <- src_monetdblite(dbdir)
+
+vano <- vvr_ano_mco(con, 18)
+
+```
+
+### Attribuer le caractère facturable du séjour tel que sur epmsi (tableau sv)
+
+
+```{r eval = FALSE}
+## Not run: 
+# Tenir compte des porg
+ano_sv <- vvr_mco_sv(vrsa, vano, porg = ipo(p))
+
+# ne pas tenir compte des porg
+ano_sv <- vvr_mco_sv(vrsa, vano)
+
+## End(Not run)
+
+```
+
+## Conjuguer la valorisation des séjours à leur caractère facturable
+
+Une fois que les éléments sont prêts, on peut les rassembler :
+
+```{r eval = FALSE}
+valo_rsa <- vvr_mco(rsa_v, ano_sv)
+```
+
+Ou tout calculer en un seul appel à ces différentes fonctions : 
+
+```{r eval = FALSE}
+resu <- vvr_mco(
+vvr_ghs_supp(rsa = vrsa, 
+             tarifs = tarifs_ghs, 
+             supplements =  tarifs_supp, 
+             ano = vano, 
+             porg = ipo(p), 
+             diap = idiap(p), 
+             pie = ipie(p), 
+             full = FALSE,
+             cgeo = 1.07, 
+             prudent = NULL,
+             bee = FALSE),
+vvr_mco_sv(vrsa, vano, ipo(p))
+)
+```
+
+## Concordance avec epmsi
+
+Deux fonctions permettent de produire des tableaux importants sur epmsi : cela permet de s'assurer que le résultat est ok.
+
+- Tableau [1.V.1.SV]: Séjours valorisés
+- Tableau [1.V.1.RAV]: Récapitulation activité - valorisation & Tableau [1.V.1.RAE]: Récapitulation activité - effectifs
+
+```{r eval = FALSE}
+epmsi_mco_sv(valo_rsa, knit = TRUE)
+```
+
+```{r eval = FALSE}
+epmsi_mco_rav(valo, knit = TRUE)
+```
+
+Ce dernier tableau contient à la fois le RAE et le RAV.
+
+## Vignette présentant ces fonctions
+
+Un concentré de l'utilisation de ces fonctions, ainsi qu'un dictionnaire des variables présentes dans les tables produites sont disponibles dans l'[une des vignettes](https://im-aphp.github.io/pmeasyr/articles/vignette4.html) du package.
+
