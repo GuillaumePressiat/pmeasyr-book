@@ -1,0 +1,57 @@
+
+# Exercices (béta)
+
+Cette partie contient quelques exercices pour se familiariser à l'utilisation de `dplyr` avec les données du PMSI importées avec `pmeasyr`. Les données sont fictives et très simples, il s'agit simplement d'exercices autour de R.
+
+
+```{r, echo=F, purl=F, results='asis'}
+if (my_output=="html") {
+  cat('
+
+<div  class = "DCexercise">
+
+#### 1. Filtrer des rsa en fonction d\' actes
+
+Imaginez que vous disposez de <tt>rsa</tt> importés avec <tt>pmeasyr</tt>.
+
+**Instructions:**
+
++ charger le package dplyr
+
++ Afficher la table actes des rsa$actes
+
++ Filtrer cette table pour ne retenir que les lignes contenant l\'acte NFKA015.
+
+
+<iframe src="DCL/ex_1.html" frameborder="0" scrolling="no" style="width:100%;height:340px"></iframe>
+
+</div>') } else {
+  cat('\\begin{center}\\textit{Cette partie interactive n\'est disponible que dans la version HTML}\\end{center}')
+}
+```
+
+```{r, echo=F, purl=F, results='asis'}
+if (my_output=="html") {
+  cat('
+<div  class = "DCexercise">
+
+#### 2. Filtrer sur les actes, les diagnostics et croiser les deux informations
+
+**Instructions:**
+
++ charger le package dplyr
+
++ Afficher la table actes des rsa$actes
+
++ Créer une table <tt>a</tt> en filtrer les actes des rsa pour ne retenir que les lignes contenant l\'acte NFKA015.
+
++ Créer une table <tt>b</tt> en filtrant les diagnostics des rsa pour ne retenir que les lignes contenant le code E66.
+
++ Croiser ces deux tables
+
+<iframe src="DCL/ex_2.html" frameborder="0" scrolling="no" style="width:100%;height:340px"></iframe>
+
+</div>') } 
+```
+
+

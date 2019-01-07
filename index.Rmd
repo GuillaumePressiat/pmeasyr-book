@@ -10,6 +10,7 @@ description: "Ce livre numérique présente des exemples de traitements de donn�
 ---
 
 
+
 # Introduction
 
 Ce livret numérique présente des exemples de traitements de données PMSI avec R. L'objectif est de concentrer ici :

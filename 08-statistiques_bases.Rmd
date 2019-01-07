@@ -1,5 +1,6 @@
 # Statistiques du PMSI
 
+
 ## Âge et durée de séjour
 
 ```{r eval = F}

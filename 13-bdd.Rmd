@@ -1,5 +1,6 @@
 # Vers la base de données avec `pmeasyr`
 
+
 Constatant que chaque étude avec `pmeasyr` commence par un import de données, nous proposons une nouvelle approche : intégrer une fois pour toutes les données M12 dans une base de données managée et accessible avec `pmeasyr`. Les données en cours d'année pouvant également y être intégrées. 
 
 Nous décrivons ici l'import de données MCO 2016 dans une base de données tel qu'il est possible de le réaliser à l'aide de `pmeasyr`.

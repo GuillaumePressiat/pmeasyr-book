@@ -1,5 +1,6 @@
 # Restructurer des listes de codes : enrobeur
 
+
 La fonction `enrobeur()` permet de structurer une liste de diagnostics, de ghm ou de codes CCAM sous différents formats, selon le type de requêtes que l'on souhaite effectuer ensuite.
 
 

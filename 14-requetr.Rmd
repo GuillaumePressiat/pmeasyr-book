@@ -1,5 +1,6 @@
 # requetr : rédiger, exécuter des requêtes pmsi
 
+
 Cette partie de `pmeasyr` concerne la rédaction et l'exécution de requêtes pmsi. Quelques exemples d'abord puis une présentation de ce qu'il est possible de faire avec (et, de manière complémentaire, de ce qu'il n'est pas possible de faire).
 
 

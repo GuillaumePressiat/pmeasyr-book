@@ -1,5 +1,6 @@
 # Help
 
+
 Toutes les fonctions du package ont une page d'aide : 
 
 ```{r eval = F}

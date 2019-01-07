@@ -1,5 +1,6 @@
 # Noms de colonnes en minuscules
 
+
 Dans chaque fonction, un nouveau paramètre est disponible : `tolower_names`. Il permet à l'utlisateur de choisir entre minuscules et majuscules pour les noms des variables dans les tables.
 
 Par homogénéité avec le format jusqu'alors, la valeur par défaut de ce paramètre reste `FALSE`, les noms de variables restent donc en majuscule sans modifier ce paramètre.

@@ -7,6 +7,8 @@
 
 Cette partie de `pmeasyr` permet de constituer des tables contenant les informations de valorisation de chaque rsa, en accord avec la valorisation epmsi, donc avec la valorisation VisualValoSej (VVS, d'où le choix du nom vvr).
 
+
+
 Trois étapes sont distinguées pour reproduire la valorisation d'un rsa : 
 
 - disposer des référentiels de tarifs
