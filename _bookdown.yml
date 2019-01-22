@@ -2,3 +2,4 @@ book_filename: "pmeasyr-book"
 language:
   ui:
     chapter_name: ""
+delete_merged_file: true

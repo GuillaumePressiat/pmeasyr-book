@@ -1,0 +1,60 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Contexte\040et\040motivations}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Avantages\040de\040R}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Contenu\040du\040package}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Installation\040du\040package}{chapter.2}% 5
+\BOOKMARK [0][-]{chapter.3}{Les\040archives\040PMSI}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Arborescence\040des\040archives}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{Informations\040sur\040les\040archives}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.3}{Dézippage}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.4}{Suppression}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{Import des données}{}% 11
+\BOOKMARK [1][-]{section.4.1}{MCO}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{HAD}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{SSR}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.4}{PSY}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.5}{RSF}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.6}{Dictionnaire\040de\040variables}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.7}{Labels}{chapter.4}% 18
+\BOOKMARK [0][-]{chapter.5}{Requêtes sur des pathologies / actes}{}% 19
+\BOOKMARK [1][-]{section.5.1}{Transposition\040des\040codes\040diagnostics}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{Recherche\040de\040codes\040diagnostics}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{Recherche\040de\040codes\040actes}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{Étude des files actives}{}% 23
+\BOOKMARK [1][-]{section.6.1}{Import des données Anohosp}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.2}{File\040active\040d'une\040pathologie}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.3}{File\040active\040d'une\040chirurgie}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Fichier\040TRA}{}% 27
+\BOOKMARK [1][-]{section.7.1}{Ajout\040du\040TRA\040en\040MCO}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.2}{Ajout\040du\040TRA\040en\040HAD}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.3}{Ajout\040du\040TRA\040en\040SSR}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.4}{Ajout\040du\040TRA\040en\040PSY}{chapter.7}% 31
+\BOOKMARK [0][-]{chapter.8}{Statistiques\040du\040PMSI}{}% 32
+\BOOKMARK [1][-]{section.8.1}{Âge et durée de séjour}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.2}{Nombre de séjours par catégorie majeure de diagnostics}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.3}{Case-mix\040MCO,\040DMS\040par\040GHM\040/\040GHS}{chapter.8}% 35
+\BOOKMARK [0][-]{chapter.9}{Help}{}% 36
+\BOOKMARK [0][-]{chapter.10}{Noyau de paramètres}{}% 37
+\BOOKMARK [1][-]{section.10.1}{Quatre paramètres}{chapter.10}% 38
+\BOOKMARK [1][-]{section.10.2}{Solution\040avec\040noyau_pmeasyr\(\)}{chapter.10}% 39
+\BOOKMARK [1][-]{section.10.3}{noyau_skeleton\(\)}{chapter.10}% 40
+\BOOKMARK [0][-]{chapter.11}{Restructurer\040des\040listes\040de\040codes\040:\040enrobeur}{}% 41
+\BOOKMARK [0][-]{chapter.12}{Noms\040de\040colonnes\040en\040minuscules}{}% 42
+\BOOKMARK [0][-]{chapter.13}{Vers la base de données avec pmeasyr}{}% 43
+\BOOKMARK [1][-]{section.13.1}{Connexion à une base de données}{chapter.13}% 44
+\BOOKMARK [1][-]{section.13.2}{Intégration en base}{chapter.13}% 45
+\BOOKMARK [1][-]{section.13.3}{Accéder aux données dans la base}{chapter.13}% 46
+\BOOKMARK [0][-]{chapter.14}{requetr : rédiger, exécuter des requêtes pmsi}{}% 47
+\BOOKMARK [1][-]{section.14.1}{Définir une requête}{chapter.14}% 48
+\BOOKMARK [1][-]{section.14.2}{Requêtes sur des rsa importés avec irsa}{chapter.14}% 49
+\BOOKMARK [1][-]{section.14.3}{Requêtes sur des rsa dans la base de données}{chapter.14}% 50
+\BOOKMARK [1][-]{section.14.4}{Éléments possibles pour une requête}{chapter.14}% 51
+\BOOKMARK [1][-]{section.14.5}{Lancer plusieurs requêtes}{chapter.14}% 52
+\BOOKMARK [0][-]{chapter.15}{vvr\040:\040Valoriser\040les\040rsa}{}% 53
+\BOOKMARK [1][-]{section.15.1}{Accéder aux tarifs depuis R}{chapter.15}% 54
+\BOOKMARK [1][-]{section.15.2}{Étape séjour}{chapter.15}% 55
+\BOOKMARK [1][-]{section.15.3}{Étape facture}{chapter.15}% 56
+\BOOKMARK [1][-]{section.15.4}{Conjuguer la valorisation des séjours à leur caractère facturable}{chapter.15}% 57
+\BOOKMARK [1][-]{section.15.5}{Concordance\040avec\040epmsi}{chapter.15}% 58
+\BOOKMARK [1][-]{section.15.6}{Vignette présentant ces fonctions}{chapter.15}% 59
+\BOOKMARK [0][-]{chapter.16}{Exercices \(béta\)}{}% 60
