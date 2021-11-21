@@ -5,15 +5,15 @@
 
 |Nom       |Fonction                           |
 |:---------|:----------------------------------|
-|[irsa](https://im-aphp.github.io/pmeasyr/reference/irsa.html)      |~ MCO - Import des RSA             |
-|[irum](https://im-aphp.github.io/pmeasyr/reference/irum.html)      |~ MCO - Import des RUM             |
-|[idiap](https://im-aphp.github.io/pmeasyr/reference/idiap.html)     |~ MCO - Import des DIAP            |
-|[idmi_mco](https://im-aphp.github.io/pmeasyr/reference/idmi_mco.html)  |~ MCO - Import des DMI             |
-|[iium](https://im-aphp.github.io/pmeasyr/reference/iium.html)      |~ MCO - Import des donnees UM      |
-|[ileg_mco](https://im-aphp.github.io/pmeasyr/reference/ileg_mco.html)  |~ MCO - Import des erreurs Leg     |
-|[imed_mco](https://im-aphp.github.io/pmeasyr/reference/imed_mco.html)  |~ MCO - Import des Med             |
-|[ipo](https://im-aphp.github.io/pmeasyr/reference/ipo.html)       |~ MCO - Import des PO              |
-|[iano_mco](https://im-aphp.github.io/pmeasyr/reference/iano_mco.html)  |~ MCO - Import des Anohosp         |
+|[irsa](https://guillaumepressiat.github.io/pmeasyr/reference/irsa.html)      |~ MCO - Import des RSA             |
+|[irum](https://guillaumepressiat.github.io/pmeasyr/reference/irum.html)      |~ MCO - Import des RUM             |
+|[idiap](https://guillaumepressiat.github.io/pmeasyr/reference/idiap.html)     |~ MCO - Import des DIAP            |
+|[idmi_mco](https://guillaumepressiat.github.io/pmeasyr/reference/idmi_mco.html)  |~ MCO - Import des DMI             |
+|[iium](https://guillaumepressiat.github.io/pmeasyr/reference/iium.html)      |~ MCO - Import des donnees UM      |
+|[ileg_mco](https://guillaumepressiat.github.io/pmeasyr/reference/ileg_mco.html)  |~ MCO - Import des erreurs Leg     |
+|[imed_mco](https://guillaumepressiat.github.io/pmeasyr/reference/imed_mco.html)  |~ MCO - Import des Med             |
+|[ipo](https://guillaumepressiat.github.io/pmeasyr/reference/ipo.html)       |~ MCO - Import des PO              |
+|[iano_mco](https://guillaumepressiat.github.io/pmeasyr/reference/iano_mco.html)  |~ MCO - Import des Anohosp         |
 
 Les données in / out sont prises en charge.
 
@@ -115,10 +115,10 @@ Les fonctions d'imports pour ces champs PMSI reposent sur le même principe qu'e
 
 |Nom        |Fonction                              |
 |:----------|:-------------------------------------|
-|[iano_had](https://im-aphp.github.io/pmeasyr/reference/iano_had.html)   |~ HAD - Import des Anohosp            |
-|[imed_had](https://im-aphp.github.io/pmeasyr/reference/imed_had.html)   |~ HAD - Import des Med                |
-|[irapss](https://im-aphp.github.io/pmeasyr/reference/irapss.html)     |~ HAD - Import des RAPSS              |
-|[ileg_had](https://im-aphp.github.io/pmeasyr/reference/ileg_had.html)     |~ HAD - Import des erreurs LEG        |
+|[iano_had](https://guillaumepressiat.github.io/pmeasyr/reference/iano_had.html)   |~ HAD - Import des Anohosp            |
+|[imed_had](https://guillaumepressiat.github.io/pmeasyr/reference/imed_had.html)   |~ HAD - Import des Med                |
+|[irapss](https://guillaumepressiat.github.io/pmeasyr/reference/irapss.html)     |~ HAD - Import des RAPSS              |
+|[ileg_had](https://guillaumepressiat.github.io/pmeasyr/reference/ileg_had.html)     |~ HAD - Import des erreurs LEG        |
 
 ```{r eval = F}
 library(pmeasyr)
@@ -133,12 +133,12 @@ irapss(finess = 750712184,
 
 |Nom        |Fonction                              |
 |:----------|:-------------------------------------|
-|[iano_ssr](https://im-aphp.github.io/pmeasyr/reference/iano_ssr.html)   |~ SSR - Import des Anohosp            |
-|[irha](https://im-aphp.github.io/pmeasyr/reference/irha.html)       |~ SSR - Import des RHA                |
-|[issrha](https://im-aphp.github.io/pmeasyr/reference/issrha.html)     |~ SSR - Import des SSRHA              |
-|[imed_ssr](https://im-aphp.github.io/pmeasyr/reference/imed_ssr.html)     |~ SSR - Import des MED              |
-|[iium_ssr](https://im-aphp.github.io/pmeasyr/reference/iium_ssr.html)     |~ SSR - Import des UM              |
-|[ileg_ssr](https://im-aphp.github.io/pmeasyr/reference/ileg_ssr.html)     |~ SSR - Import des erreurs LEG        |
+|[iano_ssr](https://guillaumepressiat.github.io/pmeasyr/reference/iano_ssr.html)   |~ SSR - Import des Anohosp            |
+|[irha](https://guillaumepressiat.github.io/pmeasyr/reference/irha.html)       |~ SSR - Import des RHA                |
+|[issrha](https://guillaumepressiat.github.io/pmeasyr/reference/issrha.html)     |~ SSR - Import des SSRHA              |
+|[imed_ssr](https://guillaumepressiat.github.io/pmeasyr/reference/imed_ssr.html)     |~ SSR - Import des MED              |
+|[iium_ssr](https://guillaumepressiat.github.io/pmeasyr/reference/iium_ssr.html)     |~ SSR - Import des UM              |
+|[ileg_ssr](https://guillaumepressiat.github.io/pmeasyr/reference/ileg_ssr.html)     |~ SSR - Import des erreurs LEG        |
 
 
 ```{r eval = F}
@@ -153,9 +153,9 @@ irha(finess = 750041543,
 
 |Nom        |Fonction                              |
 |:----------|:-------------------------------------|
-|[iano_psy](https://im-aphp.github.io/pmeasyr/reference/iano_psy.html)   |~ PSY - Import des Anohosp            |
-|[ir3a](https://im-aphp.github.io/pmeasyr/reference/ir3a.html)       |~ PSY - Import des R3A                |
-|[irpsa](https://im-aphp.github.io/pmeasyr/reference/irpsa.html)      |~ PSY - Import des RPSA               |
+|[iano_psy](https://guillaumepressiat.github.io/pmeasyr/reference/iano_psy.html)   |~ PSY - Import des Anohosp            |
+|[ir3a](https://guillaumepressiat.github.io/pmeasyr/reference/ir3a.html)       |~ PSY - Import des R3A                |
+|[irpsa](https://guillaumepressiat.github.io/pmeasyr/reference/irpsa.html)      |~ PSY - Import des RPSA               |
 
 ```{r eval = F}
 # Import des rpsa 2015
@@ -175,8 +175,8 @@ ir3a(finess = 750803454,
 
 |Nom        |Fonction                              |
 |:----------|:-------------------------------------|
-|[irafael](https://im-aphp.github.io/pmeasyr/reference/irafael.html)    |~ RSF - Import des RSFA / Rafael      |
-|[iano_rafael](https://im-aphp.github.io/pmeasyr/reference/iano_rafael.html)|~ RSF - Import des RSFA / ANO         |
+|[irafael](https://guillaumepressiat.github.io/pmeasyr/reference/irafael.html)    |~ RSF - Import des RSFA / Rafael      |
+|[iano_rafael](https://guillaumepressiat.github.io/pmeasyr/reference/iano_rafael.html)|~ RSF - Import des RSFA / ANO         |
 
 
 ```{r eval = F}

@@ -57,7 +57,7 @@ La fonction `astat` permet d'éditer des statistiques sommaires sur les fichiers
 
 |Nom       |Fonction                                                                               |
 |:---------|:--------------------------------------------------------------------------------------|
-|[astat](https://im-aphp.github.io/pmeasyr/reference/astat.html)     |~ *.zip - Liste et volume des fichiers d'une archive PMSI|
+|[astat](https://guillaumepressiat.github.io/pmeasyr/reference/astat.html)     |~ *.zip - Liste et volume des fichiers d'une archive PMSI|
 
 
 ```{r eval = F}
@@ -80,8 +80,8 @@ Les fonctions permettent de dézipper les fichiers depuis `R` en ligne de comman
 
 |Nom       |Fonction                                                                               |
 |:---------|:--------------------------------------------------------------------------------------|
-|[adezip](https://im-aphp.github.io/pmeasyr/reference/adezip.html)    |~ *.zip - Dezippe des fichiers de l'archive PMSI                                        |
-|[adezip2](https://im-aphp.github.io/pmeasyr/reference/adezip2.html)   |~ *.zip - Dezippe des fichiers de l'archive PMSI, avec en parametre le nom de l'archive|
+|[adezip](https://guillaumepressiat.github.io/pmeasyr/reference/adezip.html)    |~ *.zip - Dezippe des fichiers de l'archive PMSI                                        |
+|[adezip2](https://guillaumepressiat.github.io/pmeasyr/reference/adezip2.html)   |~ *.zip - Dezippe des fichiers de l'archive PMSI, avec en parametre le nom de l'archive|
 
 
 

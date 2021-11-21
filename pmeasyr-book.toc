@@ -1,93 +1,93 @@
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {chapter}{\numberline {2}Contexte et motivations}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Avantages de R}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Un flux de travail unique}{7}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}R et le PMSI}{7}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Des outils performants}{8}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Contenu du package}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Installation du package}{8}{section.2.3}
-\contentsline {chapter}{\numberline {3}Les archives PMSI}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Arborescence des archives}{9}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Sous Unix}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Sous Windows}{9}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Informations sur les archives}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Dézippage}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Suppression}{13}{section.3.4}
-\contentsline {chapter}{\numberline {4}Import des données}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}MCO}{15}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}RSA}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}RUM}{16}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Colonnes stream}{16}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}HAD}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}SSR}{17}{section.4.3}
-\contentsline {section}{\numberline {4.4}PSY}{18}{section.4.4}
-\contentsline {section}{\numberline {4.5}RSF}{18}{section.4.5}
-\contentsline {section}{\numberline {4.6}Dictionnaire de variables}{18}{section.4.6}
-\contentsline {section}{\numberline {4.7}Labels}{18}{section.4.7}
-\contentsline {chapter}{\numberline {5}Requêtes sur des pathologies / actes}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Transposition des codes diagnostics}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Recherche de codes diagnostics}{21}{section.5.2}
-\contentsline {section}{\numberline {5.3}Recherche de codes actes}{22}{section.5.3}
-\contentsline {chapter}{\numberline {6}Étude des files actives}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}Import des données Anohosp}{23}{section.6.1}
-\contentsline {section}{\numberline {6.2}File active d'une pathologie}{23}{section.6.2}
-\contentsline {section}{\numberline {6.3}File active d'une chirurgie}{23}{section.6.3}
-\contentsline {chapter}{\numberline {7}Fichier TRA}{25}{chapter.7}
-\contentsline {section}{\numberline {7.1}Ajout du TRA en MCO}{25}{section.7.1}
-\contentsline {section}{\numberline {7.2}Ajout du TRA en HAD}{26}{section.7.2}
-\contentsline {section}{\numberline {7.3}Ajout du TRA en SSR}{26}{section.7.3}
-\contentsline {section}{\numberline {7.4}Ajout du TRA en PSY}{26}{section.7.4}
-\contentsline {chapter}{\numberline {8}Statistiques du PMSI}{29}{chapter.8}
-\contentsline {section}{\numberline {8.1}Âge et durée de séjour}{29}{section.8.1}
-\contentsline {section}{\numberline {8.2}Nombre de séjours par catégorie majeure de diagnostics}{29}{section.8.2}
-\contentsline {section}{\numberline {8.3}Case-mix MCO, DMS par GHM / GHS}{29}{section.8.3}
-\contentsline {chapter}{\numberline {9}Help}{31}{chapter.9}
-\contentsline {chapter}{\numberline {10}Noyau de paramètres}{33}{chapter.10}
-\contentsline {section}{\numberline {10.1}Quatre paramètres}{33}{section.10.1}
-\contentsline {section}{\numberline {10.2}Solution avec \texttt {noyau\_pmeasyr()}}{34}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Définir le noyau de paramètres}{34}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Utiliser le noyau de paramètres}{34}{subsection.10.2.2}
-\contentsline {section}{\numberline {10.3}\texttt {noyau\_skeleton()}}{34}{section.10.3}
-\contentsline {chapter}{\numberline {11}Restructurer des listes de codes : enrobeur}{35}{chapter.11}
-\contentsline {subsection}{\numberline {11.0.1}Pour du SQL \%like\% \%..\% (left \& right)}{35}{subsection.11.0.1}
-\contentsline {subsection}{\numberline {11.0.2}SQL \%like\% ..\%}{35}{subsection.11.0.2}
-\contentsline {subsection}{\numberline {11.0.3}SQL \%like\% \%..}{35}{subsection.11.0.3}
-\contentsline {subsection}{\numberline {11.0.4}Pour du grepl}{35}{subsection.11.0.4}
-\contentsline {subsection}{\numberline {11.0.5}Pour du listing}{36}{subsection.11.0.5}
-\contentsline {chapter}{\numberline {12}Noms de colonnes en minuscules}{37}{chapter.12}
-\contentsline {chapter}{\numberline {13}Vers la base de données avec \texttt {pmeasyr}}{39}{chapter.13}
-\contentsline {section}{\numberline {13.1}Connexion à une base de données}{39}{section.13.1}
-\contentsline {subsection}{\numberline {13.1.1}monetdb}{39}{subsection.13.1.1}
-\contentsline {subsection}{\numberline {13.1.2}SQLite}{39}{subsection.13.1.2}
-\contentsline {subsection}{\numberline {13.1.3}PostGres}{39}{subsection.13.1.3}
-\contentsline {section}{\numberline {13.2}Intégration en base}{39}{section.13.2}
-\contentsline {subsection}{\numberline {13.2.1}Définition des paramètres}{39}{subsection.13.2.1}
-\contentsline {subsection}{\numberline {13.2.2}Exemple d'import}{40}{subsection.13.2.2}
-\contentsline {section}{\numberline {13.3}Accéder aux données dans la base}{40}{section.13.3}
-\contentsline {subsection}{\numberline {13.3.1}Lister les tables dans la base}{40}{subsection.13.3.1}
-\contentsline {subsection}{\numberline {13.3.2}Accéder aux tables mco out}{40}{subsection.13.3.2}
-\contentsline {chapter}{\numberline {14}requetr : rédiger, exécuter des requêtes pmsi}{41}{chapter.14}
-\contentsline {section}{\numberline {14.1}Définir une requête}{41}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}Exemple simple}{41}{subsection.14.1.1}
-\contentsline {subsection}{\numberline {14.1.2}Exemple plus complexe}{41}{subsection.14.1.2}
-\contentsline {section}{\numberline {14.2}Requêtes sur des rsa importés avec \texttt {irsa}}{42}{section.14.2}
-\contentsline {section}{\numberline {14.3}Requêtes sur des rsa dans la base de données}{42}{section.14.3}
-\contentsline {section}{\numberline {14.4}Éléments possibles pour une requête}{42}{section.14.4}
-\contentsline {section}{\numberline {14.5}Lancer plusieurs requêtes}{43}{section.14.5}
-\contentsline {subsection}{\numberline {14.5.1}Exemple de liste de requêtes}{43}{subsection.14.5.1}
-\contentsline {subsection}{\numberline {14.5.2}Lancement}{43}{subsection.14.5.2}
-\contentsline {chapter}{\numberline {15}vvr : Valoriser les rsa}{45}{chapter.15}
-\contentsline {section}{\numberline {15.1}Accéder aux tarifs depuis R}{45}{section.15.1}
-\contentsline {section}{\numberline {15.2}Étape séjour}{45}{section.15.2}
-\contentsline {subsection}{\numberline {15.2.1}Préparation des rsa}{46}{subsection.15.2.1}
-\contentsline {subsection}{\numberline {15.2.2}Calculer la valorisation GHS borne extrême haut + extrême bas}{46}{subsection.15.2.2}
-\contentsline {subsection}{\numberline {15.2.3}Calculer la valorisation GHS borne extrême haut + extrême bas et suppléments}{46}{subsection.15.2.3}
-\contentsline {section}{\numberline {15.3}Étape facture}{46}{section.15.3}
-\contentsline {subsection}{\numberline {15.3.1}Préparation des ano}{46}{subsection.15.3.1}
-\contentsline {subsection}{\numberline {15.3.2}Attribuer le caractère facturable du séjour tel que sur epmsi (tableau sv)}{47}{subsection.15.3.2}
-\contentsline {section}{\numberline {15.4}Conjuguer la valorisation des séjours à leur caractère facturable}{47}{section.15.4}
-\contentsline {section}{\numberline {15.5}Concordance avec epmsi}{47}{section.15.5}
-\contentsline {section}{\numberline {15.6}Vignette présentant ces fonctions}{48}{section.15.6}
-\contentsline {chapter}{\numberline {16}Exercices (béta)}{49}{chapter.16}
-\contentsline {subsubsection}{\numberline {16.0.0.1}1. Filtrer des rsa en fonction d' actes}{49}{subsubsection.16.0.0.1}
-\contentsline {subsubsection}{\numberline {16.0.0.2}2. Filtrer sur les actes, les diagnostics et croiser les deux informations}{49}{subsubsection.16.0.0.2}
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Contexte et motivations}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Avantages de R}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Un flux de travail unique}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}R et le PMSI}{10}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Des outils performants}{10}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Contenu du package}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Installation du package}{11}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Les archives PMSI}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Arborescence des archives}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Sous Unix}{13}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Sous Windows}{15}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Informations sur les archives}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Dézippage}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Suppression}{16}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Import des données}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}MCO}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}RSA}{21}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}RUM}{23}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Colonnes stream}{23}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}HAD}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}SSR}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}PSY}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}RSF}{26}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Dictionnaire de variables}{26}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Labels}{26}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Requêtes sur des pathologies / actes}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Transposition des codes diagnostics}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Recherche de codes diagnostics}{30}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Recherche de codes actes}{30}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Étude des files actives}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Import des données Anohosp}{31}{section.6.1}%
+\contentsline {section}{\numberline {6.2}File active d'une pathologie}{31}{section.6.2}%
+\contentsline {section}{\numberline {6.3}File active d'une chirurgie}{32}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Fichier TRA}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Ajout du TRA en MCO}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ajout du TRA en HAD}{34}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Ajout du TRA en SSR}{34}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Ajout du TRA en PSY}{35}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Statistiques du PMSI}{37}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Âge et durée de séjour}{37}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Nombre de séjours par catégorie majeure de diagnostics}{37}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Case-mix MCO, DMS par GHM / GHS}{38}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Help}{39}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Noyau de paramètres}{41}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Quatre paramètres}{41}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Solution avec \texttt {noyau\_pmeasyr()}}{42}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Définir le noyau de paramètres}{42}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Utiliser le noyau de paramètres}{42}{subsection.10.2.2}%
+\contentsline {section}{\numberline {10.3}\texttt {noyau\_skeleton()}}{43}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Restructurer des listes de codes : enrobeur}{45}{chapter.11}%
+\contentsline {subsection}{\numberline {11.0.1}Pour du SQL \%like\% \%..\% (left \& right)}{45}{subsection.11.0.1}%
+\contentsline {subsection}{\numberline {11.0.2}SQL \%like\% ..\%}{45}{subsection.11.0.2}%
+\contentsline {subsection}{\numberline {11.0.3}SQL \%like\% \%..}{46}{subsection.11.0.3}%
+\contentsline {subsection}{\numberline {11.0.4}Pour du grepl}{46}{subsection.11.0.4}%
+\contentsline {subsection}{\numberline {11.0.5}Pour du listing}{46}{subsection.11.0.5}%
+\contentsline {chapter}{\numberline {12}Noms de colonnes en minuscules}{47}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Vers la base de données avec \texttt {pmeasyr}}{49}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Connexion à une base de données}{49}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}monetdb}{49}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}SQLite}{49}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}PostGres}{50}{subsection.13.1.3}%
+\contentsline {section}{\numberline {13.2}Intégration en base}{50}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Définition des paramètres}{50}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Exemple d'import}{50}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Accéder aux données dans la base}{51}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Lister les tables dans la base}{51}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Accéder aux tables mco out}{51}{subsection.13.3.2}%
+\contentsline {chapter}{\numberline {14}requetr : rédiger, exécuter des requêtes pmsi}{53}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Définir une requête}{53}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Exemple simple}{53}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Exemple plus complexe}{53}{subsection.14.1.2}%
+\contentsline {section}{\numberline {14.2}Requêtes sur des rsa importés avec \texttt {irsa}}{54}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Requêtes sur des rsa dans la base de données}{54}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Éléments possibles pour une requête}{55}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Lancer plusieurs requêtes}{55}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}Exemple de liste de requêtes}{55}{subsection.14.5.1}%
+\contentsline {subsection}{\numberline {14.5.2}Lancement}{55}{subsection.14.5.2}%
+\contentsline {chapter}{\numberline {15}vvr : Valoriser les rsa}{57}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Accéder aux tarifs depuis R}{57}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Étape séjour}{58}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Préparation des rsa}{58}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Calculer la valorisation GHS borne extrême haut + extrême bas}{58}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}Calculer la valorisation GHS borne extrême haut + extrême bas et suppléments}{59}{subsection.15.2.3}%
+\contentsline {section}{\numberline {15.3}Étape facture}{59}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Préparation des ano}{59}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Attribuer le caractère facturable du séjour tel que sur epmsi (tableau sv)}{59}{subsection.15.3.2}%
+\contentsline {section}{\numberline {15.4}Conjuguer la valorisation des séjours à leur caractère facturable}{60}{section.15.4}%
+\contentsline {section}{\numberline {15.5}Concordance avec epmsi}{60}{section.15.5}%
+\contentsline {section}{\numberline {15.6}Vignette présentant ces fonctions}{61}{section.15.6}%
+\contentsline {chapter}{\numberline {16}Exercices (béta)}{63}{chapter.16}%
+\contentsline {subsubsection}{\numberline {16.0.0.1}1. Filtrer des rsa en fonction d' actes}{63}{subsubsection.16.0.0.1}%
+\contentsline {subsubsection}{\numberline {16.0.0.2}2. Filtrer sur les actes, les diagnostics et croiser les deux informations}{63}{subsubsection.16.0.0.2}%

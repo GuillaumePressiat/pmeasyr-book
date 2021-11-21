@@ -1,5 +1,6 @@
 
 
+
 # Contexte et motivations {#contexte}
 
 Les données du Programme de Médicalisation des Systèmes d'Information (PMSI) sont souvent traitées via des logiciels spécifiques au PMSI (ou des outils statistiques / bases de données du marché) ne permettant pas de réaliser des traitements statistiques et des infographies satisfaisantes. Les départements d'information médicale sont donc souvent amenés à retraiter ces données avec R.
@@ -32,9 +33,9 @@ L'utilisation de R confère aux données du PMSI la liberté proposée par le lo
 
 ### Des outils performants
 
-L'engouement autour de R est lié au développement de packages intuitifs et performants : [*readr*](http://readr.tidyverse.org), [*dplyr*](https://github.com/hadley/dplyr), [*tidyr*](http://tidyr.tidyverse.org), [*magrittr*](https://github.com/tidyverse/magrittr), pour n'en citer que quelques-uns. [*pmeasyr*](https://github.com/IM-APHP/pmeasyr) s'appuie sur ces packages pour proposer des imports de données rapides sur des fichiers de taille importante (l'entité juridique de l'AP-HP est prise en charge sans problème avec un ordinateur récent).
+L'engouement autour de R est lié au développement de packages intuitifs et performants : [*readr*](http://readr.tidyverse.org), [*dplyr*](https://github.com/hadley/dplyr), [*tidyr*](http://tidyr.tidyverse.org), [*magrittr*](https://github.com/tidyverse/magrittr), pour n'en citer que quelques-uns. [*pmeasyr*](https://github.com/GuillaumePressiat/pmeasyr) s'appuie sur ces packages pour proposer des imports de données rapides sur des fichiers de taille importante (l'entité juridique de l'AP-HP est prise en charge sans problème avec un ordinateur récent).
 
-Dans le cas de [*pmeasyr*](https://github.com/IM-APHP/pmeasyr), l'import de 100 000 RSA (partie fixe, parsing des passages unités médicales, des diagnostics associés et des actes) nécessite en moyenne 5 secondes avec un processeur i7 -- 16Go de ram.
+Dans le cas de [*pmeasyr*](https://github.com/GuillaumePressiat/pmeasyr), l'import de 100 000 RSA (partie fixe, parsing des passages unités médicales, des diagnostics associés et des actes) nécessite en moyenne 5 secondes avec un processeur i7 -- 16Go de ram.
 
 En dernier ressort, R travaillant en mémoire vive, les exécutions de requêtes sont très rapides. 
 
@@ -47,7 +48,7 @@ Il est utilisé depuis un an à l'AP-HP pour des analyses d'activité et la desc
 ## Installation du package
 
 ```{r echo = T, eval = F} 
-devtools::install_github('IM-APHP/pmeasyr')
+remotes::install_github('GuillaumePressiat/pmeasyr')
 ``` 
 
 Cette commande lance l'installation du package et de ses dépendances.

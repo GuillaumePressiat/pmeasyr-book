@@ -1,6 +1,6 @@
 --- 
 title: "Traitement des données PMSI avec R"
-author: "Guillaume Pressiat || SIMAP / DOMU / Assistance Publique - Hôpitaux de Paris"
+author: "Guillaume Pressiat || CHU Brest"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -14,7 +14,7 @@ description: "Ce livre numérique présente des exemples de traitements de donn�
 
 Ce livret numérique présente des exemples de traitements de données PMSI avec R. L'objectif est de concentrer ici :
 
-  - une documentation permettant de débuter avec l'import de données via le package [*pmeasyr*](https://github.com/IM-APHP/pmeasyr)
+  - une documentation permettant de débuter avec l'import de données via le package [*pmeasyr*](https://github.com/GuillaumePressiat/pmeasyr)
   
   - des exemples d'analyses PMSI :
     - requêtes sur les diagnostics et les actes

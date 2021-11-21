@@ -8,4 +8,4 @@ Toutes les fonctions du package ont une page d'aide :
 ?irsa
 ```
 
-L'aide en ligne est disponible [ici](https://im-aphp.github.io/pmeasyr).
+L'aide en ligne est disponible [ici](https://guillaumepressiat.github.io/pmeasyr).
